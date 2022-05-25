@@ -15,9 +15,9 @@ This is an unofficial implementation of the paper:
 
 Based mostly on a previous implementation from [here](https://github.com/sgsellan/botsch-kobbelt-remesher-libigl), which implements [A Remeshing Approach to Multiresolution Modeling](https://dl.acm.org/doi/10.1145/1057432.1057457).
 
-The Adaptive Remeshing scheme introduces a sizing field which is a scalar dependant on the local curvature of the mesh, and dictates how the target edge length changes (smaller for higher curvature areas).
+The paper introduces a sizing field which is a scalar dependant on the local curvature of the mesh, and dictates how the target edge length changes (smaller for higher curvature areas).
 
-This implementation degenerates into the old one with the flag -na, forcing a constant sizing field upon all the mesh.
+This implementation degenerates into the original one with the flag -na, forcing a constant sizing field upon all the mesh.
 
 ## Installation
 
@@ -43,7 +43,7 @@ make
 
 -i  | Number of iterations to run remeshing
 
--e  | Epsilon (for adaptive) / Target Edge Length (not adaptive), controls the resolution of output
+-e  | Epsilon (for adaptive) / Target Edge Length (For non adaptive), controls the resolution of output
 
 -p  | Project result vertices of each iteration on original mesh
 
