@@ -15,7 +15,7 @@ The compilation of this code (C++) produces a python library as well (using nump
 </tr>
 </table>
 
-Based mostly on a previous implementation from [here](https://github.com/sgsellan/botsch-kobbelt-remesher-libigl), which implements [A Remeshing Approach to Multiresolution Modeling](https://dl.acm.org/doi/10.1145/1057432.1057457).
+Based mostly on an implementation of [A Remeshing Approach to Multiresolution Modeling](https://dl.acm.org/doi/10.1145/1057432.1057457) from [here](https://github.com/sgsellan/botsch-kobbelt-remesher-libigl).
 
 The key contribution of this paper is introducing a "sizing field" which is a scalar-per-vertex dependant on the local curvature of the mesh, and dictates the target edge length (for which the vertex is one of its endpoints) - high curvature areas recieve a smaller sizing field).
 
