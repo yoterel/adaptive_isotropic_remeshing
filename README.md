@@ -41,11 +41,11 @@ make
 
 `./adaptive_remesh`
 
-or for python (requires libigl, but you can use any other library to load some mesh):
+or for python (requires [libigl](https://libigl.github.io/libigl-python-bindings/) for loading the mesh, not for actual remeshing):
 
 ```
 import igl
-import numpy as np
+import numpy as np  # for converting double to float
 from py_ada_remesh import adaptive_remesh_botsch
 v, f = igl.read_triangle_mesh("./../resource/nefratiti_orig.ply")
 new_v, new_f = adaptive_remesh_botsch(v, np.int32(f), 0.0008, 5, False, True)
