@@ -44,6 +44,6 @@ CTestTestfile.cmake
 _deps
 
 build
-.vscode
+.vscode/
 
 [Bb][Uu][Ii][Ll][Dd]/
