@@ -3,10 +3,10 @@ cmake_minimum_required(VERSION 3.10)
 project(adaptive_remesh VERSION 0.1.0)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
-set(CMAKE_BUILD_TYPE "Release")
+set(CMAKE_BUILD_TYPE "Release")  # change to Debug for debugging
 #set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(EXT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/ext)
-set(NPE_PYTHON_EXECUTABLE "/home/yotam/src/venv/bin/python")
+#set(NPE_PYTHON_EXECUTABLE "/path/to/virtual/env/or/any/python/bin")  # uncomment to set a path to a specific python release (default is system python version)
 
 find_package(Threads REQUIRED)
 find_package(Eigen3 REQUIRED)
