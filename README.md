@@ -37,9 +37,9 @@ cmake ..
 make
 ```
 
-3. launch:
+3. launch (see options below):
 
-`./adaptive_remesh`
+`./adaptive_remesh ./../resource/nefratiti_orig.ply ./nefratiti_compressed.obj -e 0.0008 -i 5`
 
 or for python (requires [libigl](https://libigl.github.io/libigl-python-bindings/) for loading the mesh, not for actual remeshing):
 
