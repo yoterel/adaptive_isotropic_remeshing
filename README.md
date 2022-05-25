@@ -48,7 +48,7 @@ import igl
 import numpy as np  # for converting double to float
 from py_ada_remesh import adaptive_remesh_botsch
 v, f = igl.read_triangle_mesh("./../resource/nefratiti_orig.ply")
-new_v, new_f = adaptive_remesh_botsch(v, np.int32(f), 0.0008, 5, False, True)
+new_v, new_f = adaptive_remesh_botsch(v, np.int32(f), 0.0008, 5, False, True)  #(v, f, e, p, a) - note: "a" stands for adaptive (opposite of -na option).
 igl.write_obj("nefratiti_compressed.obj", new_v, new_f)
 ```
 
