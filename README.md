@@ -2,9 +2,11 @@ This is an unofficial implementation of the paper:
 
 [Adaptive Remeshing for Real-Time Mesh Deformation](https://diglib.eg.org/handle/10.2312/conf.EG2013.short.029-032)
 
+The compilation of this code (C++) produces a python library as well (using numpyeigen).
+
 <table>
   <tr>
-    <td>Nefratiti compressed from ~1 million faces to ~360k using this implementation</td>
+    <td>Nefratiti compressed from ~100k faces to ~36k using this implementation. Notice the mesh is much more isotropic.</td>
   </tr>
  <tr>
 <td align="center">
@@ -38,6 +40,19 @@ make
 3. launch:
 
 `./adaptive_remesh`
+
+or for python (requires libigl, but you can use any other library to load some mesh):
+
+```
+import igl
+import numpy as np
+from py_ada_remesh import adaptive_remesh_botsch
+v, f = igl.read_triangle_mesh("./../resource/nefratiti_orig.ply")
+new_v, new_f = adaptive_remesh_botsch(v, np.int32(f), 0.0008, 5, False, True)
+igl.write_obj("nefratiti_compressed.obj", new_v, new_f)
+```
+
+where v is a Nx3 numpy array, f is a Mx3 numpy array, and for the other parameters see below.
 
 ## Options
 
