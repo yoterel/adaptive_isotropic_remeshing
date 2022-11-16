@@ -64,3 +64,8 @@ where v is a Nx3 numpy array, f is a Mx3 numpy array, and for the other paramete
 -p  | Project result vertices of each iteration on original mesh
 
 -na | Not Adaptive, will use original botsch & kobbelt remeshing algorithm
+
+## Common Issues
+- Passing non-manifold meshes to this algorithm: this isn't supported (by design)
+- A non orientable mesh will also fail. Normals should be facing outwards in the input.
+- Passing in a ridiculous epsilon value (either too small or too big) will result in failure.
